@@ -1,0 +1,108 @@
+The SELECT statement is used to select data from a database.
+SELECT * from category;
+===============================================
+The SQL SELECT DISTINCT Statement
+The SELECT DISTINCT statement is used to return only distinct (unique) values.
+
+In a table, a column may contain several duplicate values - and sometimes you want to list only the unique values.
+SELECT DISTINCT(catid) FROM product;
+
+======================================
+The SQL WHERE Clause
+The WHERE clause is used to filter records.
+
+The WHERE clause is used to extract only those records that fulfill a specific condition.
+SELECT * FROM `product` WHERE catid=5
+
+===============================
+The SQL ORDER BY
+The ORDER BY keyword is used to sort the result-set in ascending or descending order.
+
+The ORDER BY keyword sorts the result-set in ascending order (ASC) by default.
+SELECT * FROM `product` ORDER BY pname ASC;
+SELECT * FROM `product` ORDER BY pname DESC;
+======================================
+The SQL AND Operator
+The WHERE clause can contain one or many AND operators.
+
+The AND operator is used to filter records based on more than one condition.
+The SQL OR Operator
+The WHERE clause can contain one or more OR operators.
+
+The OR operator is used to filter records based on more than one condition.
+The NOT Operator
+The NOT operator is used in the WHERE clause to return all records that DO NOT match the specified criteria. It reverses the result of a condition from true to false and vice-versa.
+
+The following SQL selects all customers that are NOT from Spain:    
+SELECT * FROM `product` WHERE catid=5 AND price>=1500;
+SELECT * FROM `product` WHERE catid=5 OR price>=7000;
+SELECT * FROM `product` WHERE not catid=5;
+
+======================================
+
+The SQL SELECT TOP Clause
+The SELECT TOP clause is used to limit the number of records to return.
+
+The SELECT TOP clause is useful on large tables with thousands of records. Returning a large number of records can impact performance.
+SELECT * FROM `product` LIMIT 0,10;
+SELECT * FROM `product` LIMIT 10,10;
+===================================
+MIN() - returns the smallest value of a column
+MAX() - returns the largest value of a column
+COUNT() - returns the number of rows in a set
+SUM() - returns the sum of a numerical column
+AVG() - returns the average value of a numerical column
+
+SELECT MIN(price) as MinPrice FROM product;
+SELECT MAx(price) as MaxPrice FROM product;
+SELECT SUM(price) as TotalPrice FROM product;
+SELECT AVG(price) as AvgPrice FROM product;
+SELECT COUNT(pid) as CatWiseProduct from product WHERE catid=5;
+
+
+======================================
+The LIKE operator is used in a WHERE clause to search for a specified pattern within a column's text data.
+
+There are two wildcards often used in conjunction with the LIKE operator:
+
+A percent sign % - represents zero, one, or multiple characters
+A underscore sign _ - represents a single character
+SELECT * FROM `product` WHERE pname LIKE 'B%';
+SELECT * FROM `product` WHERE pname LIKE '%f%';
+===============================================
+The IN operator is used in the WHERE clause to check if a specified column's value matches any value within a provided list.
+
+The IN operator functions as a shorthand for multiple OR conditions, making queries shorter and more readable.
+SELECT * FROM `product` WHERE catid in (5,6,7);
+
+===================================================
+he SQL BETWEEN Operator
+The BETWEEN operator is used in the WHERE clause to select values within a specified range.
+
+The range is inclusive - the beginning and end values of the range are included in the results.
+SELECT * FROM `product` WHERE price BETWEEN 500 AND 1000;
+======================================================
+The JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+
+Here are the different types of JOINs in SQL:
+
+(INNER) JOIN: Returns only rows that have matching values in both tables
+LEFT (OUTER) JOIN: Returns all rows from the left table, and only the matched rows from the right table
+RIGHT (OUTER) JOIN: Returns all rows from the right table, and only the matched rows from the left table
+FULL (OUTER) JOIN: Returns all rows when there is a match in either the left or right table
+SELECT * FROM `product` join category ON product.catid = category.cid;
+SELECT * FROM `product` left join category ON product.catid = category.cid;
+SELECT * FROM `product` Right join category ON product.catid = category.cid;
+SELECT * FROM `product` full join category ;
+
+================================================
+The GROUP BY statement is used to group rows that have the same values into summary rows, like "Find the number of customers in each country".
+
+The GROUP BY statement is almost always used in conjunction with aggregate functions, like COUNT(), MAX(), MIN(), SUM(), AVG(), to perform calculations on each group.
+SELECT count(pid) AS TotalProduct,catid FROM product GROUP BY catid;
+
+
+The HAVING clause is used to filter the results of a GROUP BY query based on aggregate functions.
+
+Unlike the WHERE clause, which filters individual rows before grouping, the HAVING clause filters groups after the aggregation has been performed.
+SELECT sum(price) AS TotalPrice,catid FROM product GROUP BY catid HAVING TotalPrice>10000;

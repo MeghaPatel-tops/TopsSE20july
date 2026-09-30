@@ -1,0 +1,79 @@
+CREATE  PROCEDURE getProduct()
+SELECT * from product;
+
+CALL getProduct();
+
+CREATE PROCEDURE getProductbyId(id int)
+SELECT * from product WHERE pid=id;
+
+
+call getProductbyId(12);
+
+CREATE VIEW productview as SELECT pid,pname,cid,cname,price from product JOIN category on product.catid = category.cid;
+
+SELECT * FROM productview ;
+
+CREATE TABLE temptbl(tid int PRIMARY KEY AUTO_INCREMENT,pid int,timeof datetime);
+ALTER TABLE temptbl ADD COLUMN pname varchar(20);
+
+
+CREATE TRIGGER producttrigger
+AFTER UPDATE ON product
+FOR EACH ROW
+INSERT INTO temptbl(pid,timeof)VALUES(old.pid,now());
+
+START TRANSACTION;
+DELETE FROM product WHERE pid=25;
+COMMIT;
+
+START TRANSACTION;
+DELETE FROM product WHERE pid=26;
+ROLLBACK;
+
+
+START TRANSACTION;
+
+SAVEPOINT sp1;
+INSERT into product(pname,price,description)VALUES('laptop','21000','test');
+
+SAVEPOINT sp2;
+UPDATE product SET price=2700 where pid=4;
+
+
+SAVEPOINT sp3;
+UPDATE product SET price=100 where pid=8;
+
+ROLLBACK TO sp3;
+
+COMMIT;
+=====================================
+DELIMITER //
+CREATE PROCEDURE productPriceUpdate()
+BEGIN
+DECLARE cpid int;
+DECLARE cprice float;
+DECLARE done int  DEFAULT 0;
+
+
+DECLARE productCur CURSOR FOR 
+SELECT pid,price from product;
+
+DECLARE CONTINUE HANDLER FOR NOT FOUND
+ SET done = 1;
+ 
+ OPEN productCur;
+ 
+ ploop:LOOP
+     FETCH productCur into cpid,cprice;
+     
+     IF done = 1 THEN
+     LEAVE ploop;
+     END IF;
+     
+     update product set price = cprice+200  where pid=cpid;
+     
+ END LOOP;
+ 
+ CLOSE productCur;
+ 
+ END //;

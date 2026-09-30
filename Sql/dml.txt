@@ -1,0 +1,100 @@
+Data manuplation lan
+
+Insert
+INSERT INTO category(cname)VALUES('Cloths');
+
+INSERT INTO product(pname,price,catid,description)values('Dress',1200,1,"Punjabi Dress");
+
+UPDATE product SET price=1500 WHERE pid=1;
+DELETE FROM product WHERE pid=1;
+
+
+INSERT INTO category(cname) VALUES('Electronics');
+INSERT INTO category(cname) VALUES('Books');
+INSERT INTO category(cname) VALUES('Shoes');
+INSERT INTO category(cname) VALUES('Furniture');
+INSERT INTO category(cname) VALUES('Grocery');
+INSERT INTO category(cname) VALUES('Mobiles');
+INSERT INTO category(cname) VALUES('Laptops');
+INSERT INTO category(cname) VALUES('Watches');
+INSERT INTO category(cname) VALUES('Bags');
+INSERT INTO category(cname) VALUES('Jewellery');
+INSERT INTO category(cname) VALUES('Beauty Products');
+INSERT INTO category(cname) VALUES('Sports');
+INSERT INTO category(cname) VALUES('Toys');
+INSERT INTO category(cname) VALUES('Home Appliances');
+
+-- Category 1: Cloths
+INSERT INTO product(pname,price,catid,description) VALUES('Dress',1200,1,'Punjabi Dress');
+INSERT INTO product(pname,price,catid,description) VALUES('Kurti',800,1,'Cotton Kurti');
+INSERT INTO product(pname,price,catid,description) VALUES('Shirt',650,1,'Casual Cotton Shirt');
+
+-- Category 2: Electronics
+INSERT INTO product(pname,price,catid,description) VALUES('Headphones',1500,2,'Wireless Bluetooth Headphones');
+INSERT INTO product(pname,price,catid,description) VALUES('Speaker',2200,2,'Portable Bluetooth Speaker');
+INSERT INTO product(pname,price,catid,description) VALUES('Keyboard',900,2,'Wireless Keyboard');
+
+-- Category 3: Books
+INSERT INTO product(pname,price,catid,description) VALUES('The Alchemist',400,3,'Famous motivational novel');
+INSERT INTO product(pname,price,catid,description) VALUES('Atomic Habits',550,3,'Self improvement book');
+INSERT INTO product(pname,price,catid,description) VALUES('Rich Dad Poor Dad',450,3,'Personal finance book');
+
+-- Category 4: Shoes
+INSERT INTO product(pname,price,catid,description) VALUES('Running Shoes',1800,4,'Comfortable running shoes');
+INSERT INTO product(pname,price,catid,description) VALUES('Sports Shoes',2200,4,'Lightweight sports shoes');
+INSERT INTO product(pname,price,catid,description) VALUES('Casual Shoes',1500,4,'Stylish casual shoes');
+
+-- Category 5: Furniture
+INSERT INTO product(pname,price,catid,description) VALUES('Office Chair',4500,5,'Comfortable office chair');
+INSERT INTO product(pname,price,catid,description) VALUES('Study Table',3500,5,'Wooden study table');
+INSERT INTO product(pname,price,catid,description) VALUES('Bookshelf',2800,5,'Wooden bookshelf');
+
+-- Category 6: Grocery
+INSERT INTO product(pname,price,catid,description) VALUES('Rice',650,6,'Premium basmati rice');
+INSERT INTO product(pname,price,catid,description) VALUES('Wheat Flour',450,6,'Fresh wheat flour');
+INSERT INTO product(pname,price,catid,description) VALUES('Cooking Oil',180,6,'Refined cooking oil');
+
+-- Category 7: Mobiles
+INSERT INTO product(pname,price,catid,description) VALUES('Samsung Galaxy',18000,7,'Android smartphone');
+INSERT INTO product(pname,price,catid,description) VALUES('Redmi Note',14000,7,'Budget smartphone');
+INSERT INTO product(pname,price,catid,description) VALUES('OnePlus Nord',25000,7,'Powerful 5G smartphone');
+
+-- Category 8: Laptops
+INSERT INTO product(pname,price,catid,description) VALUES('HP Laptop',55000,8,'HP Core i5 laptop');
+INSERT INTO product(pname,price,catid,description) VALUES('Dell Laptop',62000,8,'Dell Core i5 laptop');
+INSERT INTO product(pname,price,catid,description) VALUES('Lenovo Laptop',48000,8,'Lenovo IdeaPad laptop');
+
+-- Category 9: Watches
+INSERT INTO product(pname,price,catid,description) VALUES('Titan Watch',3500,9,'Classic analog watch');
+INSERT INTO product(pname,price,catid,description) VALUES('Smart Watch',2800,9,'Fitness tracking smartwatch');
+INSERT INTO product(pname,price,catid,description) VALUES('Digital Watch',1200,9,'Digital sports watch');
+
+-- Category 10: Bags
+INSERT INTO product(pname,price,catid,description) VALUES('Laptop Bag',1800,10,'Water resistant laptop bag');
+INSERT INTO product(pname,price,catid,description) VALUES('School Bag',1200,10,'Large school backpack');
+INSERT INTO product(pname,price,catid,description) VALUES('Travel Bag',2500,10,'Spacious travel bag');
+
+-- Category 11: Jewellery
+INSERT INTO product(pname,price,catid,description) VALUES('Necklace',2500,11,'Beautiful fashion necklace');
+INSERT INTO product(pname,price,catid,description) VALUES('Earrings',1200,11,'Designer earrings');
+INSERT INTO product(pname,price,catid,description) VALUES('Bracelet',900,11,'Stylish fashion bracelet');
+
+-- Category 12: Beauty Products
+INSERT INTO product(pname,price,catid,description) VALUES('Face Wash',350,12,'Refreshing face wash');
+INSERT INTO product(pname,price,catid,description) VALUES('Lipstick',500,12,'Long lasting lipstick');
+INSERT INTO product(pname,price,catid,description) VALUES('Face Cream',650,12,'Moisturizing face cream');
+
+-- Category 13: Sports
+INSERT INTO product(pname,price,catid,description) VALUES('Cricket Bat',2500,13,'English willow cricket bat');
+INSERT INTO product(pname,price,catid,description) VALUES('Football',900,13,'Professional football');
+INSERT INTO product(pname,price,catid,description) VALUES('Badminton Racket',1500,13,'Lightweight badminton racket');
+
+-- Category 14: Toys
+INSERT INTO product(pname,price,catid,description) VALUES('Remote Car',1200,14,'Remote controlled toy car');
+INSERT INTO product(pname,price,catid,description) VALUES('Building Blocks',800,14,'Creative building blocks');
+INSERT INTO product(pname,price,catid,description) VALUES('Teddy Bear',700,14,'Soft teddy bear');
+
+-- Category 15: Home Appliances
+INSERT INTO product(pname,price,catid,description) VALUES('Mixer Grinder',3500,15,'Powerful kitchen mixer');
+INSERT INTO product(pname,price,catid,description) VALUES('Electric Kettle',1200,15,'Fast boiling electric kettle');
+INSERT INTO product(pname,price,catid,description) VALUES('Room Heater',2500,15,'Portable room heater');
