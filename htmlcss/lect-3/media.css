@@ -1,0 +1,58 @@
+ /* Responsive Design */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            .hero-content h1 {
+                font-size: 35px;
+            }
+
+            .hero-image img {
+                width: 220px;
+                height: 220px;
+            }
+
+            .project-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            section {
+                padding: 50px 5%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 30px;
+            }
+
+            .hero-content p {
+                font-size: 17px;
+            }
+
+            .skill {
+                width: 100%;
+                text-align: center;
+            }
+        }

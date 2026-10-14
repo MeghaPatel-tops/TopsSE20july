@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Form Example</h1>
+    <form>
+        <table align="center" border="1" cellspacing="10px" cellpadding="10px">
+            <tr>
+                <th>Username</th>
+                <td>
+                    <input type="text" name="username" id="" required>
+                </td>
+                <th>Email</th>
+                <td>
+                    <input type="email" name="email" id="" required>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Contact
+                </th>
+                <td>
+                    <input type="text" name="contact" id="">
+                </td>
+                <th>
+                    Password
+                </th>
+                <td>
+                    <input type="password" name="pwd" id="">
+                </td>
+
+            </tr>
+            <tr>
+                <th>address</th>
+                <td>
+                    <textarea name="address" id=""></textarea>
+                </td>
+                <th>City</th>
+                <td>
+                    <select name="city" id="">
+                        <option value="">select</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Vadodara">Vadodara</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Hobby</th>
+                <td>
+                    <input type="checkbox" name="hobby[]" id="" value="Sport">Sport
+                    <input type="checkbox" name="hobby[]" id="" value="Music">Music
+                    <input type="checkbox" name="hobby[]" id="" value="Dance">Dance
+                </td>
+                <th>Gender</th>
+                <td>
+                    <input type="radio" name="gender" id="" value="male">Male
+                    <input type="radio" name="gender" id="" value="female">Female
+                </td>
+            </tr>
+            <tr>
+                <th>DOB</th>
+                <td><input type="date" name="" id=""></td>
+                <th>Profile Iamge</th>
+                <td>
+                    <input type="file" name="" id="">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4" align="center">
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <h2 align="center">
+        <fieldset style="background-color: gainsboro;">
+            <legend>Extra Inputs</legend>
+            <table>
+                <tr>
+                    <th>Color</th>
+                <td><input type="color" name="" id=""></td>
+                </tr>
+                <tr>
+                    <th>Date and Time</th>
+                    <td>
+                        <input type="datetime-local" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Url</th>
+                    <td><input type="url" name="" id=""></td>
+                </tr>
+                <tr>
+                    <th>Qty</th>
+                    <td><input type="number" name="" id=""></td>
+                </tr>
+            </table>
+        </fieldset>
+    </h2>
+
+</body>
+</html>
