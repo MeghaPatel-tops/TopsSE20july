@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row{
+            background-color: ghostwhite;
+            padding: 50px 8%;
+            display: flex;
+            justify-content: space-between;
+            gap:20px;
+            
+        }
+        .col{
+            padding: 50px;
+            flex: 1;
+            background-color: white;
+            box-shadow: 3px 3px 5px gray;
+            border-radius: 20px;
+            text-align: center;
+            border-bottom: 5px solid gray;
+        }
+        .col:hover{
+             border: 2px solid aqua;
+             border-bottom: 5px solid aqua;
+        }
+        #col-4{
+            background-color: yellow;
+            border-bottom: 5px solid orange;
+
+        }
+         #col-4:hover{
+            border: 2px solid orange;
+            border-bottom: 5px solid orange;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col">60k</div>
+        <div class="col">70.5</div>
+        <div class="col">200M</div>
+        <div class="col " id="col-4">7.3.1</div>
+    </div>
+</body>
+</html>

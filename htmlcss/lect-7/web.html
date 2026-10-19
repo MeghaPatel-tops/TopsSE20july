@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+             text-align: center;
+        }
+        .main{
+            background-color: antiquewhite;
+            display: grid;
+            grid-template-areas: 'header header header header header'
+                                'nav nav nav nav nav '
+                                'section section section section aside'
+                                'article article article article aside'
+                                'footer footer footer footer footer';
+        }
+        header{
+            grid-area:header ;
+            background-color: aquamarine;
+            padding: 50px 0px;
+        }
+         nav{
+            grid-area:nav ;
+            background-color: rgb(22, 173, 65);
+            padding: 50px 0px;
+        }
+         section{
+            grid-area:section;
+            background-color: rgb(157, 106, 44);
+           height: 400px;
+        }
+         aside{
+            grid-area:aside ;
+            background-color: rgb(82, 146, 170);
+            padding: 50px 0px;
+        }
+          article{
+            grid-area:article;
+            background-color: rgb(160, 92, 160);
+           height: 400px;
+        }
+        footer{
+            grid-area:footer;
+            background-color: rgb(157, 79, 79);
+           height: 100px;
+        }
+        header,nav,section,aside,article,footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header>Header</header>
+        <nav>
+           Navbar
+        </nav>
+        <aside>AsideBar</aside>
+        <section>Section</section>
+        <article>Article</article>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

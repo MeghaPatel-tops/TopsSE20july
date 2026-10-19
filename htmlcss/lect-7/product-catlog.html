@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:20px;
+            padding: 50px 8%;
+            background-color: beige;
+        }
+        .card{
+            border-radius: 20px;
+           
+        }
+        .card:hover{
+            transform: translateY(-10px);
+        }
+        .card-img img{
+            height: 300px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            width: 100%;
+        }
+        .card-text{
+            padding: 20px 10px;
+            background-color: white;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .card-text span{
+            color: orange;
+        }
+        .card-text h2{
+            color: rgb(73, 73, 73);
+        }
+        .card-text p{
+            color: gray;
+        }
+         .card-text h3{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="card">
+            <div class="card-img">
+                <img src="burger.jpeg" alt="">
+            </div>
+            <div class="card-text">
+                <span>Burgers</span>
+                <h2>Classic Smash Burger</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum odit facilis ipsam corrupti vel</p>
+                <h3>Price:$14.99</h3>
+            </div>
+        </div>
+         <div class="card">
+            <div class="card-img">
+                <img src="burger.jpeg" alt="">
+            </div>
+            <div class="card-text">
+                <span>Burgers</span>
+                <h2>Classic Smash Burger</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum odit facilis ipsam corrupti vel</p>
+                <h3>Price:$14.99</h3>
+            </div>
+        </div>
+         <div class="card">
+            <div class="card-img">
+                <img src="burger.jpeg" alt="">
+            </div>
+            <div class="card-text">
+                <span>Burgers</span>
+                <h2>Classic Smash Burger</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum odit facilis ipsam corrupti vel</p>
+                <h3>Price:$14.99</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
