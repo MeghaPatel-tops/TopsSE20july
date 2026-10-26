@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+    scroll-behavior: smooth;
+}
+        nav {
+            padding: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 3em;
+        }
+
+        .hero {
+             height: 100vh;
+            background-color: gray;
+            padding: 100px 8% 100px;
+            display: flex;
+            
+
+        }
+
+        .hero-text h1 {
+            font-size: 4em;
+        }
+
+        .hero-text h2 {
+            font-size: 2em;
+        }
+
+        .hero-text p {
+            font-size: 1em;
+        }
+
+        .hero-text {
+            opacity: 0;
+            transform: translate(500px, 0);
+            animation-name: textMove;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+                       
+        }
+
+        @keyframes textMove {
+            0% {
+                opacity: 0;
+                transform: translate(500px, 0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0px, 0);
+            }
+        }
+
+        .about {
+            /* min-height: 500px; */
+            padding: 100px 8%;
+            background-color: gainsboro;
+            display: flex;
+            gap: 50px
+        }
+
+    .about-text {
+    
+    /* animation: textUp linear both;
+   
+    animation-duration: 10s; */
+    animation: textUp 2s linear both;
+   
+
+}
+
+@keyframes textUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+    </style>
+</head>
+
+<body>
+    <nav>Welcome To App</nav>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Hello , I'm Megha Patel</h1>
+            <h2>AI-anble Full Stack Developer</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing <br> elit. Rem ex delectus incidunt iure, <br>facere
+                labore sint reiciendis sit nisi corporis quas deserunt consectetur <br> maiores earum, quaerat mollitia,
+                repellendus autem eius?</p>
+        </div>
+    </section>
+    <section class="about">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptas qui non quasi voluptate
+                cumque. Adipisci minima id repellendus illum dolorum corporis, laudantium alias ea reprehenderit quidem
+                tempora eius facere.
+            </p>
+        </div>
+        <div class="about-img">
+            <img src="person.jpeg" alt="">
+        </div>
+    </section>
+</body>
+
+</html>

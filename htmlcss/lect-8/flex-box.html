@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color: black;
+            color: white;
+            padding: 10px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navitems a{
+            text-decoration: none;
+            color: white;
+            padding: 0 20px;
+        }
+        .row{
+             padding: 50px 8%;
+            background-color: rgb(198, 214, 220);
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:20px
+        }
+        .col{
+            background-color: white;
+            padding: 50px 0px;
+            text-align: center;
+            border-radius: 20px;
+            color: gray;
+        }
+        @media screen and (max-width:768px) {
+            nav{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navitems a{
+                display: block;
+                padding: 20px 10px;
+            }
+            .row{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+     <nav>
+        <h2>ShopEsay</h2>
+        <div class="navitems">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Product</a>
+        </div>
+     </nav>
+     <section>
+        <div class="row">
+            <div class="col" id="col-1">Col-1</div>
+            <div class="col" id="col-2">Col-2</div>
+            <div class="col" id="col-3">Col-3</div>
+            <div class="col" id="col-4">Col-4</div>
+            <div class="col" id="col-5">Col-5</div>
+            <div class="col" id="col-6">Col-6</div>
+        </div>
+     </section>
+</body>
+</html>
